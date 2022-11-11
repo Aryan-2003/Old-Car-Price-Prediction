@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import pickle
 import pandas as pd
 import numpy as np
+import uvicorn
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -47,3 +48,6 @@ async def price_endpoint(item:PriceItem):
     yhat = model.predict(df)
     print(yhat)
     return {'Predcition': np.round(float(yhat),2)}
+
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", port=5000)
