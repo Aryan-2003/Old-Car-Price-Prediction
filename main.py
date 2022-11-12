@@ -10,11 +10,11 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "https://bigblackcars.netlify.app/",
+    "https://bigblackcars.netlify.app",
     "http://localhost:3000",
     "http://localhost:3001",
     "http://127.0.0.1:8000",
-    "https://car-preds-price.herokuapp.com/"
+    "https://car-preds-price.herokuapp.com"
 ]
 
 app.add_middleware(
